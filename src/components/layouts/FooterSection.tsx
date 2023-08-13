@@ -85,7 +85,7 @@ const Footer: FC<FooterProps> = ({}) => {
   return (
     <footer className="bg-[#f0f2f4] py-2 md:py-4">
       <div className="mx-auto w-11/12">
-        <div className="flex flex-col space-y-5 md:justify-start md:space-x-40 md:space-y-0 lg:flex-row ">
+        <div className="flex flex-col space-y-5 md:justify-start md:space-x-40 md:space-y-0 md:flex-row ">
           <section>
             <h3 className="text-sm font-semibold md:text-base">
               Order & Purchases
