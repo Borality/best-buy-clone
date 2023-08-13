@@ -9,47 +9,47 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <header className="bg-bestbuy_blue text-white sticky top-0">
-      <nav className="flex w-11/12 lg:11/12 mx-auto items-center space-x-4 md:space-x-10 py-3">
-        <section className="flex flex-1 space-x-4 md:space-x-12 justify-center items-center md:w-5/12 ">
-          <Link href="" className="hover:text-primary min-w-fit">
+    <header className="sticky top-0 bg-bestbuy_blue text-white">
+      <nav className="lg:11/12 mx-auto flex w-11/12 items-center space-x-4 py-3 md:space-x-10">
+        <section className="flex flex-1 items-center justify-center space-x-4 md:w-5/12 md:space-x-12 ">
+          <Link href="" className="min-w-fit hover:text-primary">
             <Image
               src="/best-buy-logo.png"
               width={518}
               height={518}
               alt="best-buy"
-              className="w-11 h-11 md:w-12 md:h-12 object-contain"
+              className="h-11 w-11 object-contain md:h-12 md:w-12"
             />
           </Link>
           <Link href="" className="text-sm font-medium hover:text-primary">
-            <div className="flex space-x-1 items-center ">
+            <div className="flex items-center space-x-1 ">
               <AiOutlineMenu className="text-2xl" />
-              <div className="text-xl hidden md:block">Menu</div>
+              <div className="hidden text-xl md:block">Menu</div>
             </div>
           </Link>
           <div className="flex w-full">
             <Input
-              className="rounded-l-[5px] h-8 md:h-10 md:max-w-screen-sm bg-white border-white text-gray-500"
+              className="h-8 rounded-l-[5px] border-white bg-white text-gray-500 md:h-10 md:max-w-screen-sm"
               placeholder="What can we help you find today?"
             />
-            <div className=" h-8 md:h-10 w-11 bg-white grid place-items-center rounded-r-[5px]">
-              <img src="/search.svg" className="w-5 h-5 md:w-7 md:h-7"></img>
+            <div className=" grid h-8 w-11 place-items-center rounded-r-[5px] bg-white md:h-10">
+              <img src="/search.svg" className="h-5 w-5 md:h-7 md:w-7"></img>
             </div>
           </div>
         </section>
-        <section className="hidden md:block flex-none">
+        <section className="hidden flex-none md:block">
           <div className="flex space-x-9">
-            <div className="flex space-x-1 items-center">
+            <div className="flex items-center space-x-1">
               <MdStore className="text-2xl" />
               <div className="text-xl">Princeton</div>
             </div>
-            <div className="flex space-x-1 items-center">
+            <div className="flex items-center space-x-1">
               <AiOutlineShoppingCart className="text-2xl" />
               <div className="text-xl">Cart</div>
             </div>
           </div>
         </section>
-        <Link href="" className="block md:hidden flex-none">
+        <Link href="" className="block flex-none md:hidden">
           <AiOutlineShoppingCart className="text-2xl" />
         </Link>
       </nav>

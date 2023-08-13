@@ -33,13 +33,10 @@ const DATA = [
   },
 ];
 
-const CardItem: FC<CardItemProps> = ({src, title}) => (
-  <div className="flex flex-col items-center justify-center max-w-[140px]">
-    <img
-      src={src}
-      className="max-w-[130px] h-auto object-contain"
-    ></img>
-    <h3 className="mt-2 md:mt-5 min-h-[1.5rem] text-xs max-w-[150px] text-center truncate ... hover:underline hover:text-blue-950 text-bestbuy_blue">
+const CardItem: FC<CardItemProps> = ({ src, title }) => (
+  <div className="flex max-w-[140px] flex-col items-center justify-center">
+    <img src={src} className="h-auto max-w-[130px] object-contain"></img>
+    <h3 className="... mt-2 min-h-[1.5rem] max-w-[150px] truncate text-center text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:mt-5">
       {title}
     </h3>
   </div>
@@ -47,22 +44,22 @@ const CardItem: FC<CardItemProps> = ({src, title}) => (
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 pt-3 lg:pt-7">
-      <Card className="text-center max-w-3xl">
-        <div className="mt-4 md:mt-16 mb-2 md:mb-10 mx-1 md:mx-14">
+    <div className="grid grid-cols-1 gap-2 pt-3 md:grid-cols-2 md:gap-6 lg:pt-7">
+      <Card className="max-w-3xl text-center">
+        <div className="mx-1 mb-2 mt-4 md:mx-14 md:mb-10 md:mt-16">
           <CardHeader>
             <CardTitle className="text-xl md:text-3xl">Macbook</CardTitle>
-            <CardDescription className="text-sm md:text-lg font-bold">
+            <CardDescription className="text-sm font-bold md:text-lg">
               Models as low as $749.99.
             </CardDescription>
-            <CardDescription className="text-xs md:text-md">
+            <CardDescription className="md:text-md text-xs">
               Also, shop more great deals on Apple Products.
             </CardDescription>
           </CardHeader>
-          <CardContent className="mt-4 lg:mt-16 flex items-center justify-center">
+          <CardContent className="mt-4 flex items-center justify-center lg:mt-16">
             <img
               src="/macbook.jpeg"
-              className="max-h-28 md:max-h-full max-w-xs lg:max-w-md xl:max-w-lg"
+              className="max-h-28 max-w-xs md:max-h-full lg:max-w-md xl:max-w-lg"
             ></img>
           </CardContent>
         </div>
@@ -70,29 +67,35 @@ const Hero: FC<HeroProps> = ({}) => {
       <section className="grid gap-2 md:gap-6">
         <Card>
           <CardHeader>
-            <CardTitle className=" text:md md:text-lg text-start">
+            <CardTitle className=" text:md text-start md:text-lg">
               Today's top picks
             </CardTitle>
           </CardHeader>
-          <CardContent className="grid grid-flow-row lg:grid-flow-col gap-1 lg:gap-5 justify-center">
-            {DATA.map(data => (<CardItem src = "/macbook.jpeg" title="MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB"/>))}
+          <CardContent className="grid grid-flow-row justify-center gap-1 lg:grid-flow-col lg:gap-5">
+            {DATA.map((data) => (
+              <CardItem
+                key={data.title}
+                src="/macbook.jpeg"
+                title="MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB"
+              />
+            ))}
           </CardContent>
         </Card>
         <section className="grid grid-cols-2 gap-2 md:gap-6">
           <Card className="flex flex-col justify-center">
             <CardHeader className="flex-1">
-              <CardTitle className="text-base md:text-lg bg-bestbuy_blue w-fit px-2 py-1">
+              <CardTitle className="w-fit bg-bestbuy_blue px-2 py-1 text-base md:text-lg">
                 <span className="text-yellow-400">Outlet</span>{" "}
                 <span className="text-white">Deals</span>
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-2xl lg:text-5xl font-bold h-full">
+            <CardContent className="h-full text-2xl font-bold lg:text-5xl">
               <p className="leading-8 lg:leading-[3.5rem]">
                 <span className="text-red-700">Clearance</span>, open-box and
                 more.
               </p>
             </CardContent>
-            <CardFooter className="text-xs md:text-sm hover:underline hover:text-blue-950 text-bestbuy_blue flex-none">
+            <CardFooter className="flex-none text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:text-sm">
               View outlet deals
             </CardFooter>
           </Card>
@@ -103,16 +106,16 @@ const Hero: FC<HeroProps> = ({}) => {
                 the Day
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex items-center justify-center flex-col h-full">
+            <CardContent className="flex h-full flex-col items-center justify-center">
               <img
                 src="/earbuds.jpeg"
                 className="max-w-[100px] lg:max-w-[250px]"
               ></img>
-              <p className="text-xs lg:text-sm md-1 md:mt-2 hover:underline hover:text-blue-950 text-bestbuy_blue line-clamp-1">
+              <p className="md-1 line-clamp-1 text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:mt-2 lg:text-sm">
                 SanDisk - Extreme Portable 1TB External USB-C NVMe SSD - Black
               </p>
             </CardContent>
-            <CardFooter className="text-xs md:text-sm hover:underline hover:text-blue-950 text-bestbuy_blue flex-none">
+            <CardFooter className="flex-none text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:text-sm">
               See bonus deals
             </CardFooter>
           </Card>

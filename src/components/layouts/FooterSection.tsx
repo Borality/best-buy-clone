@@ -55,62 +55,62 @@ const DATA2 = [
 ];
 
 const DATA3 = [
-    {
-      text: "Affiliate Program",
-    },
-    {
-      text: "Advertise with Us",
-    },
-    {
-      text: "Developers",
-    },
-    {
-      text: "Best Buy Health",
-    },
-    {
-      text: "Best Buy Education",
-    },
-    {
-      text: "Best Buy Business",
-    },
-  ];
+  {
+    text: "Affiliate Program",
+  },
+  {
+    text: "Advertise with Us",
+  },
+  {
+    text: "Developers",
+  },
+  {
+    text: "Best Buy Health",
+  },
+  {
+    text: "Best Buy Education",
+  },
+  {
+    text: "Best Buy Business",
+  },
+];
 
 const FooterItem: FC<FooterItemProps> = ({ text }) => (
-  <p className="text-sm text-bestbuy_blue hover:underline hover:text-blue-950">{text}</p>
+  <p className="text-sm text-bestbuy_blue hover:text-blue-950 hover:underline">
+    {text}
+  </p>
 );
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
     <footer className="bg-[#f0f2f4] py-2 md:py-4">
-      <div className="w-11/12 mx-auto">
-        <div className="flex md:justify-start flex-col lg:flex-row space-y-5 md:space-y-0 md:space-x-40 ">
+      <div className="mx-auto w-11/12">
+        <div className="flex flex-col space-y-5 md:justify-start md:space-x-40 md:space-y-0 lg:flex-row ">
           <section>
-            <h3 className="font-semibold text-sm md:text-base">
+            <h3 className="text-sm font-semibold md:text-base">
               Order & Purchases
             </h3>
-            <div className="grid gap-1 lg:gap-2 mt-1 md:mt-2">
+            <div className="mt-1 grid gap-1 md:mt-2 lg:gap-2">
               {DATA1.map((data) => (
-                <FooterItem text={data.text} />
+                <FooterItem key={data.text} text={data.text} />
               ))}
             </div>
           </section>
           <section>
-            <h3 className="font-semibold text-sm md:text-base">
+            <h3 className="text-sm font-semibold md:text-base">
               Support & Services
             </h3>
-            <div className="grid gap-1 lg:gap-2 mt-1 md:mt-2">
+            <div className="mt-1 grid gap-1 md:mt-2 lg:gap-2">
               {DATA2.map((data) => (
-                <FooterItem text={data.text} />
+                <FooterItem key={data.text} text={data.text} />
               ))}
             </div>
           </section>
           <section>
-            <h3 className="font-semibold text-sm md:text-base">
-                Partnerships
-            </h3>
-            <div className="grid gap-1 lg:gap-2 mt-1 md:mt-2">
+            <h3 className="text-sm font-semibold md:text-base">Partnerships</h3>
+            <div className="mt-1 grid gap-1 md:mt-2 lg:gap-2">
               {DATA3.map((data) => (
-                <FooterItem text={data.text} />
+                <FooterItem key={data.text} text={data.text} />
               ))}
             </div>
           </section>
