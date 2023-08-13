@@ -78,7 +78,7 @@ const Hero: FC<HeroProps> = ({}) => {
         <Card>
           <CardHeader>
             <CardTitle className=" text:md text-start md:text-lg">
-              Today's top picks
+              Today's top picks 
             </CardTitle>
           </CardHeader>
           <CardContent className="grid grid-flow-row justify-center gap-1 lg:grid-flow-col lg:gap-5">
@@ -86,7 +86,7 @@ const Hero: FC<HeroProps> = ({}) => {
               <CardItem
                 key={data.title}
                 src={data.src}
-                title="MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB"
+                title={data.title}
               />
             ))}
           </CardContent>
