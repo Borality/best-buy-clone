@@ -40,7 +40,7 @@ const CardMaker: FC<CardMakerProps> = ({ src, title }) => (
   <Card>
     <div className="mx-auto flex w-11/12 flex-col items-center justify-center pb-1 lg:pb-3">
       <CardContent className="pt-4 lg:pt-10">
-        <img src={src} className="max-w-[160px] lg:max-w-[200px]"></img>
+        <img alt="product" src={src} className="max-w-[160px] lg:max-w-[200px]"></img>
       </CardContent>
       <CardTitle className="line-clamp-2 text-sm">{title}</CardTitle>
     </div>

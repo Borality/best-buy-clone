@@ -35,7 +35,11 @@ const DATA = [
 
 const CardItem: FC<CardItemProps> = ({ src, title }) => (
   <div className="flex max-w-[140px] flex-col items-center justify-center">
-    <img src={src} className="h-auto max-w-[130px] object-contain"></img>
+    <img
+      alt="product"
+      src={src}
+      className="h-auto max-w-[130px] object-contain"
+    ></img>
     <h3 className="... mt-2 min-h-[1.5rem] max-w-[150px] truncate text-center text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:mt-5">
       {title}
     </h3>
@@ -58,6 +62,7 @@ const Hero: FC<HeroProps> = ({}) => {
           </CardHeader>
           <CardContent className="mt-4 flex items-center justify-center lg:mt-16">
             <img
+              alt="macbook"
               src="/macbook.jpeg"
               className="max-h-28 max-w-xs md:max-h-full lg:max-w-md xl:max-w-lg"
             ></img>
@@ -108,6 +113,7 @@ const Hero: FC<HeroProps> = ({}) => {
             </CardHeader>
             <CardContent className="flex h-full flex-col items-center justify-center">
               <img
+                alt="earbuds"
                 src="/earbuds.jpeg"
                 className="max-w-[100px] lg:max-w-[250px]"
               ></img>

@@ -33,7 +33,11 @@ const Navbar: FC<NavbarProps> = ({}) => {
               placeholder="What can we help you find today?"
             />
             <div className=" grid h-8 w-11 place-items-center rounded-r-[5px] bg-white md:h-10">
-              <img src="/search.svg" className="h-5 w-5 md:h-7 md:w-7"></img>
+              <img
+                alt="search"
+                src="/search.svg"
+                className="h-5 w-5 md:h-7 md:w-7"
+              ></img>
             </div>
           </div>
         </section>
