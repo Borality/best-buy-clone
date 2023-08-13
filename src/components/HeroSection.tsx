@@ -78,7 +78,7 @@ const Hero: FC<HeroProps> = ({}) => {
         <Card>
           <CardHeader>
             <CardTitle className=" text:md text-start md:text-lg">
-              Today's top picks 
+              Today&apos;s top picks 
             </CardTitle>
           </CardHeader>
           <CardContent className="grid grid-flow-row justify-center gap-1 lg:grid-flow-col lg:gap-5">
