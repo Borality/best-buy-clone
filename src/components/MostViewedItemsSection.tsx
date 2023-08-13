@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Card, CardContent, CardTitle } from "./ui/card";
+import Image from "next/image";
 
 interface MostViewedItemsProps {}
 
@@ -10,27 +11,27 @@ type CardMakerProps = {
 
 const DATA = [
   {
-    src: "/earbuds.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13",
     title:
       "Sony - PlayStation 5 Console - Marvel's Spider-Man 2 Limited Edition Bundle",
   },
   {
-    src: "/earbuds.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13",
     title:
       "Sony - PlayStation 5 Console - Marvel's Spider-Man 2 Limited Edition Bundle",
   },
   {
-    src: "/earbuds.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13",
     title:
       "Sony - PlayStation 5 Console - Marvel's Spider-Man 2 Limited Edition Bundle",
   },
   {
-    src: "/earbuds.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13",
     title:
       "Sony - PlayStation 5 Console - Marvel's Spider-Man 2 Limited Edition Bundle",
   },
   {
-    src: "/earbuds.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13",
     title:
       "Sony - PlayStation 5 Console - Marvel's Spider-Man 2 Limited Edition Bundle",
   },
@@ -40,7 +41,7 @@ const CardMaker: FC<CardMakerProps> = ({ src, title }) => (
   <Card>
     <div className="mx-auto flex w-11/12 flex-col items-center justify-center pb-1 lg:pb-3">
       <CardContent className="pt-4 lg:pt-10">
-        <img alt="product" src={src} className="max-w-[160px] lg:max-w-[200px]"></img>
+        <Image width={500} height={500} alt="product" src={src} className="max-w-[160px] lg:max-w-[200px]"></Image>
       </CardContent>
       <CardTitle className="line-clamp-2 text-sm">{title}</CardTitle>
     </div>

@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <section className="flex flex-1 items-center justify-center space-x-4 md:w-5/12 md:space-x-12 ">
           <Link href="" className="min-w-fit hover:text-primary">
             <Image
-              src="/best-buy-logo.png"
+              src="https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/best-buy-logo.png?alt=media&token=c520f4e7-c65e-4f6f-8615-ef7b78b3f691"
               width={518}
               height={518}
               alt="best-buy"
@@ -33,11 +33,13 @@ const Navbar: FC<NavbarProps> = ({}) => {
               placeholder="What can we help you find today?"
             />
             <div className=" grid h-8 w-11 place-items-center rounded-r-[5px] bg-white md:h-10">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="search"
                 src="/search.svg"
                 className="h-5 w-5 md:h-7 md:w-7"
-              ></img>
+              ></Image>
             </div>
           </div>
         </section>

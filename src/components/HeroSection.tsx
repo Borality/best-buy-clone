@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 interface HeroProps {}
 
 type CardItemProps = {
@@ -16,30 +17,32 @@ type CardItemProps = {
 
 const DATA = [
   {
-    src: "/macbook.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/macbook.jpeg?alt=media&token=b4cad6a8-12d9-4b3c-9302-846a7add46b3",
     title: "MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB",
   },
   {
-    src: "/macbook.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/macbook.jpeg?alt=media&token=b4cad6a8-12d9-4b3c-9302-846a7add46b3",
     title: "MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB",
   },
   {
-    src: "/macbook.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/macbook.jpeg?alt=media&token=b4cad6a8-12d9-4b3c-9302-846a7add46b3",
     title: "MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB",
   },
   {
-    src: "/macbook.jpeg",
+    src: "https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/macbook.jpeg?alt=media&token=b4cad6a8-12d9-4b3c-9302-846a7add46b3",
     title: "MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB",
   },
 ];
 
 const CardItem: FC<CardItemProps> = ({ src, title }) => (
   <div className="flex max-w-[140px] flex-col items-center justify-center">
-    <img
+    <Image
       alt="product"
+      width={500}
+      height={500}
       src={src}
       className="h-auto max-w-[130px] object-contain"
-    ></img>
+    ></Image>
     <h3 className="... mt-2 min-h-[1.5rem] max-w-[150px] truncate text-center text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:mt-5">
       {title}
     </h3>
@@ -61,11 +64,13 @@ const Hero: FC<HeroProps> = ({}) => {
             </CardDescription>
           </CardHeader>
           <CardContent className="mt-4 flex items-center justify-center lg:mt-16">
-            <img
+            <Image
+              width={500}
+              height={500}
               alt="macbook"
-              src="/macbook.jpeg"
+              src="https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/macbook.jpeg?alt=media&token=b4cad6a8-12d9-4b3c-9302-846a7add46b3"
               className="max-h-28 max-w-xs md:max-h-full lg:max-w-md xl:max-w-lg"
-            ></img>
+            ></Image>
           </CardContent>
         </div>
       </Card>
@@ -80,7 +85,7 @@ const Hero: FC<HeroProps> = ({}) => {
             {DATA.map((data) => (
               <CardItem
                 key={data.title}
-                src="/macbook.jpeg"
+                src={data.src}
                 title="MacBook Air 13.3 Laptop - Apple M1 chip - 8GB Memory - 256GB"
               />
             ))}
@@ -112,11 +117,13 @@ const Hero: FC<HeroProps> = ({}) => {
               </CardTitle>
             </CardHeader>
             <CardContent className="flex h-full flex-col items-center justify-center">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="earbuds"
-                src="/earbuds.jpeg"
+                src="https://firebasestorage.googleapis.com/v0/b/uploadingfiles-5bb89.appspot.com/o/earbuds.jpeg?alt=media&token=cda5546a-e130-4e05-87e2-c3f4a78a8a13"
                 className="max-w-[100px] lg:max-w-[250px]"
-              ></img>
+              ></Image>
               <p className="md-1 line-clamp-1 text-xs text-bestbuy_blue hover:text-blue-950 hover:underline md:mt-2 lg:text-sm">
                 SanDisk - Extreme Portable 1TB External USB-C NVMe SSD - Black
               </p>
