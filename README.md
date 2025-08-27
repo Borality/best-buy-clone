@@ -1,38 +1,106 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TechMart — Electronics Storefront
+
+TechMart is a modern e-commerce UI inspired by leading electronics retailers. It showcases a responsive storefront with a hero section, product highlights, search input, and a clean, accessible design.
+
+Built with Next.js, TypeScript, and Tailwind CSS, following clean, production-ready code practices.
+
+## Features
+
+- Responsive layout with modern UI components
+- Hero section and promotional banners
+- Reusable UI primitives (e.g., input)
+- Footer with helpful links and branding
+- Type-safe codebase with ESLint + Prettier
+
+## Tech Stack
+
+- Next.js 13 (Pages Router)
+- TypeScript
+- Tailwind CSS (+ tailwind-merge, tailwindcss-animate)
+- React 18
+- Icons: lucide-react, react-icons
+- UI utilities: clsx, class-variance-authority
+
+## Project Structure
+
+Key paths:
+
+- `src/pages/` — application pages (Pages Router)
+- `src/components/` — UI and layout components
+  - `src/components/HeroSection.tsx`
+  - `src/components/layouts/FooterSection.tsx`
+  - `src/components/ui/input.tsx`
+- `src/styles/globals.css` — Tailwind styles entry
+- `tailwind.config.js` — Tailwind configuration
+- `next.config.js` — Next.js configuration
 
 ## Getting Started
 
-First, run the development server:
+Prerequisites:
+
+- Node.js 18+
+- Yarn 1.x
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Open http://localhost:3000 to view the app.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Build for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn build
+```
 
-## Learn More
+Start the production server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run linting:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+yarn lint
+```
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Defined in `package.json`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `dev` — start Next.js in development mode
+- `build` — build the production bundle
+- `start` — run the production server
+- `lint` — run ESLint
+
+## Styling
+
+- Tailwind CSS is set up via `tailwind.config.js` and `postcss.config.js`.
+- Global styles live in `src/styles/globals.css` and are loaded by `_app.tsx`.
+- Prefer utility-first styling and composable components.
+
+## Roadmap
+
+- Product listing and detail pages
+- Category navigation and filtering
+- Cart and checkout flow (mock or real backend)
+- Authentication and user profile
+- CMS/product data integration
+
+## Acknowledgements
+
+- Inspired by popular electronics storefront patterns for layout and UX ideas.
+- Built with Next.js, Tailwind CSS, and the React ecosystem.
+
+## License
+
+No license specified. Add a `LICENSE` file to define usage terms for this project.

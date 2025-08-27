@@ -44,7 +44,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 src="https://images.unsplash.com/vector-1754830014296-e73b22025ee7?q=80&w=1354&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 width={518}
                 height={518}
-                alt="best-buy"
+                alt="techmart"
                 className="h-10 w-10 object-contain md:h-12 md:w-12"
               />
             </Link>
