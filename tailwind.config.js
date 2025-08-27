@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
         bestbuy_blue: "#0046be",
+        bestbuy_yellow: "#ffd400",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
